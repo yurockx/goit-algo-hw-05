@@ -62,6 +62,7 @@ def count_logs_by_level(logs: List[Dict[str, str]]) -> Dict[str, int]:
     return dict(Counter(log['error type'] for log in logs))
 
 
+"""displays findings"""
 def display_log_counts(counts: Dict[str, int], logs: Optional[List[Dict[str, str]]] = None, level: Optional[str] = None):
     if not counts:
         print("No log counts to display.")
